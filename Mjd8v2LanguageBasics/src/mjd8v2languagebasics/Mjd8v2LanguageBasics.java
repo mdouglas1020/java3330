@@ -7,7 +7,7 @@ package mjd8v2languagebasics;
 
 /**
  *
- * @author Michael
+ * @author Michael Douglas mjd8v2 Java3330 Wergeles 
  */
 public class Mjd8v2LanguageBasics {
 
@@ -109,6 +109,30 @@ public class Mjd8v2LanguageBasics {
             default: System.out.println("You have the wrong date");
             break;
         }
+        System.out.println(test.integral + " is an integral");
+        
+        if(test.letter1 == test.letter2)
+        {
+            System.out.println(test.letter1 + " and " + test.letter2 +" are the same");
+        }
+        else
+        {
+            System.out.println(test.letter1 + "and" + test.letter2 + "are not the same");
+        }
+        int i;
+        
+        for(i = 10; i <= 12; i++)
+        {
+            System.out.println("i = " + i);
+        }
+        int age = 0;
+        while( age < 4)
+        {
+            System.out.println("age = " + age);
+            age++;
+        }
+        
+        System.out.println(test.greeting + ", my pawprint is " + test.myPawprint);
     }
     
     
