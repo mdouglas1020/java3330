@@ -40,7 +40,7 @@ public class Mjd8v2LanguageBasics {
         {
             System.out.println("The samples are not equal");
         }
-        if( test.heartRate >= 40 || test.heartRate <= 80 )
+        if( test.heartRate >= 40 && test.heartRate <= 80 )
         {
             System.out.println("Heart rate is normal.");
         }
