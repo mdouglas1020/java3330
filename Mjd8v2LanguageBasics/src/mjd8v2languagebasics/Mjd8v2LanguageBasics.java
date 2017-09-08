@@ -57,7 +57,7 @@ public class Mjd8v2LanguageBasics {
             System.out.println("I'm poor!");
         }
         System.out.println("force = " + test.force);
-        System.out.println(test.distance + "is the distance");
+        System.out.println(test.distance + " is the distance");
         
         if( test.lost == true && test.expensive == true)
         {
