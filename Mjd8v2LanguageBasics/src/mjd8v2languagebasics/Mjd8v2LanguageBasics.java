@@ -58,6 +58,57 @@ public class Mjd8v2LanguageBasics {
         }
         System.out.println("force = " + test.force);
         System.out.println(test.distance + "is the distance");
+        
+        if( test.lost == true && test.expensive == true)
+        {
+            System.out.println("I am really sorry! I will get the manager");       
+        }
+        if(test.lost == true && test.expensive == false)
+        {
+            System.out.println("Here is a coupon for 10% off.");
+        }
+        
+        switch(test.month)
+        {
+            case 1: System.out.println("The date is January " + test.day);
+            break;
+            
+            case 2: System.out.println("The date is Febuary " + test.day);
+            break;
+            
+            case 3: System.out.println("The date is March " + test.day);
+            break;
+            
+            case 4: System.out.println("The date is April " + test.day);
+            break;
+            
+            case 5: System.out.println("The date is May " + test.day);
+            break;
+            
+            case 6: System.out.println("The date is June " + test.day);
+            break;
+            
+            case 7: System.out.println("The date is July " + test.day);
+            break;
+            
+            case 8: System.out.println("The date is August " + test.day);
+            break;
+            
+            case 9: System.out.println("The date is September " + test.day);
+            break;
+            
+            case 10: System.out.println("The date is October " + test.day);
+            break;
+            
+            case 11: System.out.println("The date is November " + test.day);
+            break;
+            
+            case 12: System.out.println("The date is December " + test.day);
+            break;
+            
+            default: System.out.println("You have the wrong date");
+            break;
+        }
     }
     
     
