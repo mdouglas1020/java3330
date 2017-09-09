@@ -22,6 +22,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
+import static documenteditor2.WriteToFile.*;
 
 /**
  *
@@ -64,6 +65,12 @@ public class Documenteditor2 extends Application {
        saveButtonBox.getChildren().add(saveButton);
        grid.add(saveButtonBox, 0, 2);
        
+       Button clearButton = new Button("Clear");
+       HBox clearButtonBox = new HBox();
+       clearButtonBox.setAlignment(Pos.CENTER_LEFT);
+       clearButtonBox.getChildren().add(clearButton);
+       grid.add(clearButtonBox, 0, 2);
+       
        MenuBar menuBar = new MenuBar();
        Menu fileMenu = new Menu("File");
        menuBar.getMenus().add(fileMenu);
@@ -71,6 +78,11 @@ public class Documenteditor2 extends Application {
         MenuItem saveMenuItem = new MenuItem("Save");
        fileMenu.getItems().add(openMenuItem);
        fileMenu.getItems().add(saveMenuItem);
+       Menu editMenu = new Menu("Edit");
+       menuBar.getMenus().add(editMenu);
+       MenuItem clearMenuItem = new MenuItem("Clear");
+       editMenu.getItems().add(clearMenuItem);
+       
        
        openMenuItem.setOnAction((ActionEvent event) -> {
        System.out.println("Open Chosen");
@@ -81,7 +93,30 @@ public class Documenteditor2 extends Application {
     });
        
        saveButton.setOnAction((ActionEvent event)-> { 
-      System.out.println("Save Button clicked"); });
+      
+        String savedText = editor.getHtmlText();
+         WriteToFile invoke = new WriteToFile();
+         
+         invoke.WriteToFile2(savedText);
+        
+         
+         
+           
+       });
+       
+       clearMenuItem.setOnAction((ActionEvent event)->{
+       
+           String savedText = editor.getHtmlText();
+           
+           
+       
+       });
+       
+       clearButton.setOnAction((ActionEvent event)-> {
+       
+          editor.setHtmlText("");
+       
+       });
        
 //       saveButton.setRotate(45);
 //       editor.setRotate(-90);
