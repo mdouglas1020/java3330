@@ -15,10 +15,8 @@ public class Pet {
     public int age; 
     public Gender gender; 
     
-    public Pet() {
-        
-    }
-    
+  
+  
     public Pet(String type, String name, int age, Gender gender) {
         this.type = type; 
         this.name = name; 
