@@ -16,6 +16,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import static javafx.scene.paint.Color.color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -81,8 +82,8 @@ public class LoginForum extends Application {
 //           })
     
 
-        button.setOnAction(ActionEvent e) -> {
-        actionTarget.setFill(color.FIREBRICK);
+        button.setOnAction((ActionEvent event) -> {
+        actionTarget.setFill(Color.FIREBRICK);
         actionTarget.setText("Sign in button pressed");
         if(usernametextField.getText().length() < 1)
         {
@@ -97,10 +98,10 @@ public class LoginForum extends Application {
         }
         else
         {
-            System.out.println("Username: " + usernametextField.getText());
+            System.out.println("Password: " + passwordField.getText());
         }
         
-        }
+        });
         Scene scene = new Scene(root, width, height);
         primaryStage.setScene(scene);
         primaryStage.show();
